@@ -89,3 +89,21 @@ graph TD
     HMI -->|"Generate Reports"| RPT["PDF & Excel Reports"]
     DB -->|"Dataset for Future"| AI["AI / Analytics Layer"]
     HMI -->|"MQTT (Future)"| CLOUD["Cloud / Remote Monitoring"]
+```
+## 🔌 Network Topology (Physical Setup)
+
+```mermaid
+graph TD
+    subgraph Server_PC ["🖥️ PC 1 (Server Room)"]
+        IP1[("IP: 192.168.0.20")]
+        PLC["CODESYS SoftPLC"]
+        KEP["Kepware Server"]
+        PLC <-->|"Internal Memory"| KEP
+    end
+
+    subgraph Client_PC ["💻 PC 2 (Control Room)"]
+        IP2[("IP: 192.168.0.10")]
+        HMI["Python HMI (PySide6)"]
+    end
+
+    KEP <==>|"OPC UA / TCP (Port 49320)"| HMI
