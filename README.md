@@ -74,6 +74,7 @@ Operator commands and setpoints are written to the PLC via OPC UA, and live mach
 Install dependencies:
 ```bash
 pip install PySide6 opcua qt-material
+```
 
 ## 🧱 Logical System Architecture
 
