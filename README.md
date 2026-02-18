@@ -34,7 +34,7 @@ Operator commands and setpoints are written to the PLC via OPC UA, and live mach
 ![HMI Dashboard](IMG_2.png)
 
 ### 2. Kepware & PLC Status (Running on Server PC)
-![PLC Runtime](IMG_1.jpg)
+![PLC Runtime](IMG_1.jpeg)
 
 ---
 
